@@ -15,8 +15,9 @@ public class edurekaFinalSmoke {
 	public static WebDriver driver;
 	
 	@BeforeMethod
-	public static void executionSetup() {
+	public static void executionSetup() throws InterruptedException {
 		//Runs before all methods
+		Thread.sleep(20000);
 		Reporter.log("Initialize browser and navigate to home page.");
 		System.setProperty("webdriver.gecko.driver","src/resources/driver/geckodriver_linux64");
 		driver = new FirefoxDriver();
