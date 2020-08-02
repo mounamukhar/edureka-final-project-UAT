@@ -3,7 +3,7 @@ package com.mouna.edurekaUATtest.edurekaUATtest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
@@ -15,19 +15,20 @@ public class edurekaFinalSmoke {
 	public static WebDriver driver;
 	
 	@BeforeMethod
-	public static void executionSetup() {
+	public static void executionSetup() throws InterruptedException {
 		//Runs before all methods
+		Thread.sleep(20000);
 		Reporter.log("Initialize browser and navigate to home page.");
-		System.setProperty("webdriver.chrome.driver","src/resources/driver/chromedriver_mac");
-		driver = new ChromeDriver();		
-		driver.get("http://demo.guru99.com/test/newtours/");
+		System.setProperty("webdriver.gecko.driver","src/resources/driver/geckodriver_linux64");
+		driver = new FirefoxDriver();
+		driver.get("http://localhost:5000");
 	}
 	
 	@Test
 	public static void validatePageTitle() {
 		//Test case 1
 		Reporter.log("Perform test execution.");		
-		Assert.assertEquals(driver.getTitle(), "Welcome: Mercury Tours");		
+		Assert.assertEquals(driver.getTitle(), "superServe");
 	}
 	
 	
@@ -37,10 +38,10 @@ public class edurekaFinalSmoke {
 		Reporter.log("Perform string validation.");		
 		try {
 				Thread.sleep(3000);
-				driver.findElement(By.xpath("//font[contains(text(),'Name:')]"));
-				Reporter.log("Tet found as expected.");
+				driver.findElement(By.xpath("//p[contains(text(),'Hello There. This is superServe.')]"));
+				Reporter.log("Text found as expected: Hello There. This is superServe. ");
 			} catch (NoSuchElementException e) {
-				Assert.fail("Text not present.");
+				Assert.fail("Hello There. This is superServe. : Text not present!");
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
