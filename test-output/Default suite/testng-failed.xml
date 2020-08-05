@@ -7,7 +7,7 @@
         <methods>
           <include name="executionSetup"/>
           <include name="executionCleanup"/>
-          <include name="validatePageTitle"/>
+          <include name="validateStringPresent"/>
         </methods>
       </class> <!-- com.mouna.edurekaUATtest.edurekaUATtest.edurekaFinalSmoke -->
     </classes>

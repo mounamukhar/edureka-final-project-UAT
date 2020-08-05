@@ -3,6 +3,7 @@ package com.mouna.edurekaUATtest.edurekaUATtest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -19,16 +20,16 @@ public class edurekaFinalSmoke {
 		//Runs before all methods
 		Thread.sleep(20000);
 		Reporter.log("Initialize browser and navigate to home page.");
-		System.setProperty("webdriver.gecko.driver","src/resources/driver/geckodriver_linux64");
-		driver = new FirefoxDriver();
-		driver.get("http://localhost:5000");
+		System.setProperty("webdriver.chrome.driver","src/resources/driver/chromedriver_mac");
+		driver = new ChromeDriver();
+		driver.get("http://www.homedepot.com");
 	}
 	
 	@Test
 	public static void validatePageTitle() {
 		//Test case 1
 		Reporter.log("Perform test execution.");		
-		Assert.assertEquals(driver.getTitle(), "superServe");
+		Assert.assertEquals(driver.getTitle(), "The Home Depot");
 	}
 	
 	

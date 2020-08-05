@@ -17,37 +17,51 @@
       <![CDATA[Perform string validation.]]>
     </line>
     <line>
-      <![CDATA[Tet found as expected.]]>
-    </line>
-    <line>
       <![CDATA[Finish execution and clean up instances.]]>
     </line>
   </reporter-output>
-  <suite started-at="2020-02-16T23:27:01 EST" name="Default suite" finished-at="2020-02-16T23:27:09 EST" duration-ms="8446">
+  <suite started-at="2020-08-05T08:49:12 EDT" name="Default suite" finished-at="2020-08-05T08:50:03 EDT" duration-ms="50836">
     <groups>
     </groups>
-    <test started-at="2020-02-16T23:27:01 EST" name="Default test" finished-at="2020-02-16T23:27:09 EST" duration-ms="8446">
+    <test started-at="2020-08-05T08:49:12 EDT" name="Default test" finished-at="2020-08-05T08:50:03 EDT" duration-ms="50836">
       <class name="com.mouna.edurekaUATtest.edurekaUATtest.edurekaFinalSmoke">
-        <test-method is-config="true" signature="executionSetup()[pri:0, instance:com.mouna.edurekaUATtest.edurekaUATtest.edurekaFinalSmoke@25b485ba]" started-at="2020-02-16T23:27:01 EST" name="executionSetup" finished-at="2020-02-16T23:27:04 EST" duration-ms="2899" status="PASS">
+        <test-method is-config="true" signature="executionSetup()[pri:0, instance:com.mouna.edurekaUATtest.edurekaUATtest.edurekaFinalSmoke@25b485ba]" started-at="2020-08-05T08:49:12 EDT" name="executionSetup" finished-at="2020-08-05T08:49:35 EDT" duration-ms="23271" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Initialize browser and navigate to home page.]]>
             </line>
           </reporter-output>
         </test-method> <!-- executionSetup -->
-        <test-method signature="validatePageTitle()[pri:0, instance:com.mouna.edurekaUATtest.edurekaUATtest.edurekaFinalSmoke@25b485ba]" started-at="2020-02-16T23:27:04 EST" name="validatePageTitle" finished-at="2020-02-16T23:27:04 EST" duration-ms="21" status="FAIL">
+        <test-method signature="validatePageTitle()[pri:0, instance:com.mouna.edurekaUATtest.edurekaUATtest.edurekaFinalSmoke@25b485ba]" started-at="2020-08-05T08:49:35 EDT" name="validatePageTitle" finished-at="2020-08-05T08:49:36 EDT" duration-ms="817" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Perform test execution.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validatePageTitle -->
+        <test-method is-config="true" signature="executionCleanup()[pri:0, instance:com.mouna.edurekaUATtest.edurekaUATtest.edurekaFinalSmoke@25b485ba]" started-at="2020-08-05T08:49:36 EDT" name="executionCleanup" finished-at="2020-08-05T08:49:36 EDT" duration-ms="104" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Finish execution and clean up instances.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- executionCleanup -->
+        <test-method is-config="true" signature="executionSetup()[pri:0, instance:com.mouna.edurekaUATtest.edurekaUATtest.edurekaFinalSmoke@25b485ba]" started-at="2020-08-05T08:49:36 EDT" name="executionSetup" finished-at="2020-08-05T08:49:59 EDT" duration-ms="22906" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Initialize browser and navigate to home page.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- executionSetup -->
+        <test-method signature="validateStringPresent()[pri:0, instance:com.mouna.edurekaUATtest.edurekaUATtest.edurekaFinalSmoke@25b485ba]" started-at="2020-08-05T08:49:59 EDT" name="validateStringPresent" finished-at="2020-08-05T08:50:02 EDT" duration-ms="3466" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Failure Intended] but found [Welcome: Mercury Tours]]]>
+              <![CDATA[Hello There. This is superServe. : Text not present!]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Failure Intended] but found [Welcome: Mercury Tours]
+              <![CDATA[java.lang.AssertionError: Hello There. This is superServe. : Text not present!
 at org.testng.Assert.fail(Assert.java:97)
-at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:575)
-at org.testng.Assert.assertEquals(Assert.java:585)
-at com.mouna.edurekaUATtest.edurekaUATtest.edurekaFinalSmoke.validatePageTitle(edurekaFinalSmoke.java:30)
+at com.mouna.edurekaUATtest.edurekaUATtest.edurekaFinalSmoke.validateStringPresent(edurekaFinalSmoke.java:45)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -81,35 +95,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
             <line>
-              <![CDATA[Perform test execution.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- validatePageTitle -->
-        <test-method is-config="true" signature="executionCleanup()[pri:0, instance:com.mouna.edurekaUATtest.edurekaUATtest.edurekaFinalSmoke@25b485ba]" started-at="2020-02-16T23:27:04 EST" name="executionCleanup" finished-at="2020-02-16T23:27:04 EST" duration-ms="124" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Finish execution and clean up instances.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- executionCleanup -->
-        <test-method is-config="true" signature="executionSetup()[pri:0, instance:com.mouna.edurekaUATtest.edurekaUATtest.edurekaFinalSmoke@25b485ba]" started-at="2020-02-16T23:27:04 EST" name="executionSetup" finished-at="2020-02-16T23:27:06 EST" duration-ms="2148" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Initialize browser and navigate to home page.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- executionSetup -->
-        <test-method signature="validateStringPresent()[pri:0, instance:com.mouna.edurekaUATtest.edurekaUATtest.edurekaFinalSmoke@25b485ba]" started-at="2020-02-16T23:27:06 EST" name="validateStringPresent" finished-at="2020-02-16T23:27:09 EST" duration-ms="3036" status="PASS">
-          <reporter-output>
-            <line>
               <![CDATA[Perform string validation.]]>
-            </line>
-            <line>
-              <![CDATA[Tet found as expected.]]>
             </line>
           </reporter-output>
         </test-method> <!-- validateStringPresent -->
-        <test-method is-config="true" signature="executionCleanup()[pri:0, instance:com.mouna.edurekaUATtest.edurekaUATtest.edurekaFinalSmoke@25b485ba]" started-at="2020-02-16T23:27:09 EST" name="executionCleanup" finished-at="2020-02-16T23:27:09 EST" duration-ms="161" status="PASS">
+        <test-method is-config="true" signature="executionCleanup()[pri:0, instance:com.mouna.edurekaUATtest.edurekaUATtest.edurekaFinalSmoke@25b485ba]" started-at="2020-08-05T08:50:02 EDT" name="executionCleanup" finished-at="2020-08-05T08:50:03 EDT" duration-ms="187" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Finish execution and clean up instances.]]>

@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="2" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" name="edureka-Project-SmokeTest(failed)">
     <classes>
       <class name="com.mouna.edurekaUATtest.edurekaUATtest.edurekaFinalSmoke">
         <methods>
           <include name="executionSetup"/>
           <include name="executionCleanup"/>
           <include name="validateStringPresent"/>
+          <include name="validatePageTitle"/>
         </methods>
       </class> <!-- com.mouna.edurekaUATtest.edurekaUATtest.edurekaFinalSmoke -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- edureka-Project-SmokeTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
