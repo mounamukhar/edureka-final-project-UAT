@@ -39,10 +39,10 @@ public class edurekaFinalSmoke {
 		Reporter.log("Perform string validation.");		
 		try {
 				Thread.sleep(3000);
-				driver.findElement(By.xpath("//p[contains(text(),'Hello There. This is superServe.')]"));
-				Reporter.log("Text found as expected: Hello There. This is superServe. ");
+				driver.findElement(By.xpath("//div[@class='MyStore__store']"));
+				Reporter.log("Store information displayed on page.");
 			} catch (NoSuchElementException e) {
-				Assert.fail("Hello There. This is superServe. : Text not present!");
+				Assert.fail("Store information not displayed.");
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
