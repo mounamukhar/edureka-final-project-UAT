@@ -7,7 +7,7 @@ pipeline {
         stage('SCM') {
             steps {
                 echo 'Copying repository ftom GitHub...'
-                git 'https://github.com/mounamukhar/cyborgAutomation.git'
+                git 'https://github.com/mounamukhar/edureka-final-project-UAT.git'
             }
         }
         stage("SonarQube analysis") {
