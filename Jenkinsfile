@@ -26,7 +26,10 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+                sh 'mvn test'
+                build job: '/ZephyrResultUpdate'
             }
         }
+        
     }
 }
