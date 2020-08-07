@@ -10,10 +10,16 @@ pipeline {
                 git 'https://github.com/mounamukhar/edureka-final-project-UAT.git'
             }
         }
+        stage('Compile') {
+            steps {
+                echo 'Compiling code...'
+                sh 'mvn clean compile'
+            }
+        }
         stage("SonarQube analysis") {
           steps {
              withSonarQubeEnv('SonarDemoServer') {
-                sh 'mvn clean compile sonar:sonar'
+                sh 'mvn verify sonar:sonar'
              }
           }
         }
